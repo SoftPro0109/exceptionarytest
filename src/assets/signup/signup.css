@@ -1,0 +1,789 @@
+@keyframes signInFormOutAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes signInFormInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/***********************************************************/
+
+@keyframes signUpFormInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes signUpFormOutAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
+
+/***********************************************************/
+
+@keyframes signInActionsOutAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+}
+
+@keyframes signInActionsInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/***********************************************************/
+
+@keyframes signUpActionsInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-40%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes signUpActionsOutAnimation {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+}
+
+/***********************************************************/
+
+@keyframes contentInWrapInAnimation {
+  from {
+    height: 86vh;
+  }
+  to {
+    height: 93vh;
+  }
+}
+
+@keyframes contentInWrapOutAnimation {
+  from {
+    height: 93vh;
+  }
+  to {
+    height: 86vh;
+  }
+}
+
+/***********************************************************/
+
+@keyframes contentUpWrapOutAnimation {
+  from {
+    height: 93vh;
+  }
+  to {
+    height: 86vh;
+  }
+}
+
+@keyframes contentUpWrapInAnimation {
+  from {
+    height: 86vh;
+  }
+  to {
+    height: 93vh;
+  }
+}
+/****************************************************/
+
+@keyframes TextOutAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes TextInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/***********************************************************/
+
+.mainBkg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.signup {
+  height: 100%;
+}
+
+.signwithGoogle{
+  background-color: rgb(66, 133, 244) !important;
+  color: white !important;
+  margin-bottom: 10px !important;
+}
+.signwithLinkedin{
+  background-color: rgb(40, 103, 178) !important; 
+  color: white !important;
+  margin-bottom: 10px !important;
+}
+.signwithWindow{
+  color: white !important;
+  background-color: rgb(242, 80, 34) !important ;margin-bottom: 10px !important;
+}
+.signinbutton{
+  color: rgb(255, 255, 255) !important;
+    background-color: rgb(25, 118, 210) !important;
+}
+.passRecoveryForm__forgotPassword{
+  cursor: pointer; margin-left: 20px; color: rgb(66, 133, 244);
+}
+
+/*
+.contentInWrap {
+width: 50%;
+height: auto;
+display: flex;
+position: relative;
+transition: all 0.4s ease-out;
+
+animation: contentInWrapInAnimation 0.25s ease-out;
+animation: contentUpWrapOutAnimation 0.25s ease-out;
+
+}
+*/
+
+.contentWrap {
+  width: 50%;
+  min-width: 420px;
+  max-width: 936px;
+  height: auto;
+  display: flex;
+  position: relative;
+  /*
+animation: contentInWrapOutAnimation 0.25s ease-out;
+animation: contentUpWrapInAnimation 0.25s ease-out;
+*/
+}
+
+.contentWrap.expand {
+  max-height: 97vh;
+}
+
+.leftWrap,
+.rightWrap {
+  width: 50%;
+  height: auto;
+  min-height: 50vh;
+  transition: all 0.25s ease-out;
+}
+
+.leftWrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  background-color: #252525;
+  border-radius: 4px 0 0 4px;
+}
+
+.rightWrap {
+  position: relative;
+  background-color: #fff;
+  border-radius: 0 4px 4px 0;
+}
+
+.imgCont {
+  width: 250px;
+  min-width: 200px;
+  margin-bottom: 20vh;
+}
+
+.imgCont img {
+  width: 100%;
+  height: auto;
+}
+
+.textHld {
+  width: 72%;
+  color: #fff;
+  position: absolute;
+  text-align: center;
+  bottom: 13vh;
+  left: 13%;
+}
+
+.majorCap {
+  font-size: 16px;
+  margin-bottom: 2vh;
+}
+
+.minorText {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.signInForm,
+.signUpForm,
+.passRecoveryForm {
+  display: block;
+  animation: signInFormInAnimation 0.25s ease-out;
+}
+
+/* SIGN IN COLUMN */
+
+.rightWrap .topHld {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 6vh 10% 4vh;
+}
+
+.rightWrap .topHld .actionTitle {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+.rightWrap .topHld .actionTitle img {
+  width: 150px;
+  max-width: 180px;
+  height: auto;
+}
+
+.rightWrap .topHld .actionTitle .preText,
+.rightWrap .topHld .actionTitle .proText {
+  margin-top: 1vh;
+  animation: TextOutAnimation 0.25s ease-out;
+  opacity: 1;
+}
+
+.rightWrap .topHld .actionTitle .preText .show,
+.rightWrap .topHld .actionTitle .proText .show {
+  animation: TextInAnimation 0.25s ease-out;
+}
+
+.rightWrap
+  .topHld
+  .actionTitle
+  .preText
+  .hide
+  .rightWrap
+  .topHld
+  .actionTitle
+  .proText
+  .hide {
+  animation: TextOutAnimation 0.25s ease-out;
+}
+
+.rightWrap .topHld .fieldRow {
+  margin-bottom: 0vh;
+  overflow: visible;
+}
+
+.rightWrap .topHld .signUpForm .fieldRow,
+.rightWrap .topHld .signUpFormShow .fieldRow {
+  height: 60px;
+  margin-bottom: 0;
+}
+
+.rightWrap .topHld .signUpForm .fieldRow:last-child,
+.rightWrap .topHld .signUpFormShow .fieldRow:last-child {
+  margin-bottom: 4vh;
+}
+
+.rightWrap .topHld .signInForm .fieldRow:first-child {
+  margin-bottom: 1vh;
+}
+
+.rightWrap .topHld .signInForm .fieldRow,
+.rightWrap .topHld .passRecoveryForm .fieldRow {
+  height: 55px;
+}
+
+.rightWrap .topHld .signInForm .fieldRow:last-child,
+.rightWrap .topHld .signInFormHide .fieldRow:last-child {
+  display: flex;
+  margin: 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.rightWrap .topHld .signInForm .fieldRow:last-child span.forgot,
+.rightWrap .topHld .signInFormHide .fieldRow:last-child span.forgot {
+  font-size: 16px;
+  margin-left: auto;
+  color: #4285f4;
+  transition: all 0.4s ease-out;
+  white-space: nowrap;
+}
+
+.rightWrap .topHld .signInForm .fieldRow:last-child span.forgot:hover,
+.rightWrap .topHld .signInFormHide .fieldRow:last-child span.forgot:hover {
+  cursor: pointer;
+  color: rgb(110, 162, 248);
+}
+
+.rightWrap .topHld .passRecoveryForm .fieldRow {
+  height: 60px;
+  margin: 4vh 0 2vh;
+  display: block;
+  overflow: hidden;
+}
+
+.rightWrap .topHld .passRecoveryFormHide {
+  display: none;
+}
+
+/*
+.css-ahj2mt-MuiTypography-root {
+    font-size: 13px !important;
+}
+*/
+
+.rightWrap .topHld .signInActions {
+  margin: 0;
+  animation: signInActionsInAnimation 0.25s ease-out;
+}
+
+.rightWrap .topHld .signUpActions {
+  margin: 0;
+  animation: signUpActionsInAnimation 0.25s ease-out;
+}
+
+.rightWrap .topHld .signInActions .fieldRow:nth-child(1),
+.rightWrap .topHld .signUpActions .fieldRow:nth-child(1) {
+  font-size: 14px;
+  margin: 2vh 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*
+.css-1fu7jd5-MuiButtonBase-root-MuiButton-root {
+    font-size: 11px !important;
+}
+*/
+
+.rightWrap .topHld .signInActions .signInGroup {
+  display: flex;
+  flex-direction: column;
+  animation: signInActionsInAnimation 0.25s ease-out;
+  gap: 1.5vh;
+}
+
+.rightWrap .topHld .signUpActions .signInGroup {
+  display: none;
+  animation: signInActionsOutAnimation 0.25s ease-out;
+}
+
+.rightWrap .topHld .signInActions .signUpGroup {
+  display: none;
+  animation: signUpActionsOutAnimation 0.25s ease-out;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightWrap .topHld .signUpActions .signUpGroup {
+  display: flex;
+  animation: signUpActionsInAnimation 0.25s ease-out;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rightWrap .topHld .signInActions .signUpGroup a,
+.rightWrap .topHld .signUpActions .signUpGroup a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  transition: all 0.4s ease-out;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.rightWrap .topHld .signUpActions .signUpGroup a:hover:first-child {
+  background-color: rgb(25, 118, 210) !important;
+}
+
+.rightWrap .topHld .signUpActions .signUpGroup a:hover:nth-child(2) {
+  background-color: rgb(70, 126, 194) !important;
+}
+
+.rightWrap .topHld .signUpActions .signUpGroup a:hover:last-child {
+  background-color: rgb(230, 117, 86) !important;
+}
+.rightWrap .topHld .signInActions .signUpGroup a img,
+.rightWrap .topHld .signUpActions .signUpGroup a img {
+  width: auto;
+  height: 2.5vh;
+}
+.css-1fu7jd5-MuiButtonBase-root-MuiButton-root {
+  padding: 8px 16px !important;
+}
+
+.css-1d6wzja-MuiButton-startIcon {
+  display: block !important;
+}
+.css-kp9ftd-MuiIcon-root {
+  height: 23px !important;
+}
+
+.rightWrap .btHld {
+  padding: 2vh 8%;
+  background-color: rgba(37, 37, 37, 0.9);
+  border-radius: 0 0 4px 0;
+  /*
+position: absolute;
+bottom: 0;
+right: 0;
+left: 0;
+*/
+}
+
+.rightWrap .btHld .innerText,
+.rightWrap .btHld .innerNewText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  animation: TextOutAnimation 0.25s ease-out;
+}
+
+.rightWrap .btHld .innerNewText .hide,
+.rightWrap .btHld .innerNewText .hide {
+  animation: TextOutAnimation 0.25s ease-out;
+}
+
+.rightWrap .btHld .innerText .show,
+.rightWrap .btHld .innerNewText .show {
+  animation: TextInAnimation 0.25s ease-out;
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 13px;
+}
+
+.rightWrap .btHld .innerText span,
+.rightWrap .btHld .innerNewText span {
+  font-size: 14px;
+}
+
+.rightWrap .btHld .innerText span .show span,
+.rightWrap .btHld .innerNewText span .show span {
+  animation: TextInAnimation 0.25s ease-out;
+  transition: all 0.4s ease-out;
+  color: #4285f4;
+}
+
+.rightWrap .btHld .innerText span .show span:hover,
+.rightWrap .btHld .innerNewText span .show span:hover {
+  cursor: pointer;
+  color: rgb(110, 162, 248);
+}
+
+.rightWrap .btHld .innerText span a .hide,
+.rightWrap .btHld .innerNewText span a .hide {
+  animation: TextOutAnimation 0.25s ease-out;
+}
+
+.show {
+  display: block;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+}
+
+label + .css-11tfndm {
+  margin-top: 12px !important;
+}
+
+/*
+
+label+.css-ghsjzk-MuiInputBase-root-MuiInput-root {
+    margin-top: 7px !important;
+}
+
+
+.css-1d1r5q-MuiFormHelperText-root,
+.css-j7o63n.Mui-error {
+    font-size: 9px !important;
+}
+*/
+
+.css-1x51dt5-MuiInputBase-input-MuiInput-input {
+  height: 24px !important;
+}
+
+.css-1jgtvd5 {
+  width: 14px !important;
+  height: 14px !important;
+  display: flex !important;
+}
+
+.css-1fu7jd5-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  color: #fff !important;
+}
+
+/*
+.css-1qelgoy {
+    font-size: 12px !important;
+}
+
+
+label + .css-11tfndm {
+    font-size: 9px !important;
+}
+
+
+/
+.css-mnn31 {
+    font-size: 13px !important;
+    height: 22px !important;
+}
+*/
+
+.css-1fu7jd5-MuiButtonBase-root-MuiButton-root {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+}
+
+.css-1qelgoy,
+.css-1qelgoy:hover {
+  box-shadow: none !important;
+}
+
+.signInGroup
+  > div
+  > .css-1fu7jd5-MuiButtonBase-root-MuiButton-root:hover:nth-child(1),
+.signInGroup > div > .css-1qelgoy:hover:nth-child(1) {
+  background-color: rgb(25, 118, 210) !important;
+  box-shadow: none;
+}
+
+.signInGroup .css-1fu7jd5-MuiButtonBase-root-MuiButton-root:hover:nth-child(2),
+.signInGroup .css-1qelgoy:hover:nth-child(2) {
+  background-color: rgb(70, 126, 194) !important;
+}
+
+.signInGroup .btn-microsoft-login.undefined .css-1qelgoy:hover:first-child,
+.signInGroup .forced > div > .css-1qelgoy:hover {
+  background-color: rgb(230, 117, 86) !important;
+}
+
+.topHld form .fieldRow .css-1fu7jd5-MuiButtonBase-root-MuiButton-root:hover,
+.topHld form .fieldRow .css-1qelgoy:hover {
+  background-color: rgb(25, 118, 210) !important;
+}
+
+.btn-microsoft-login.undefined {
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label {
+  display: inline-block !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+}
+
+.css-kp9ftd-MuiIcon-root {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.svg-inline--fa {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* PASSWORD RECOVERY */
+
+.passPre {
+  width: 80%;
+  font-size: 13px;
+  margin: 2vh auto 12vh;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.fieldRow.reset {
+  margin-top: 5vh;
+}
+
+.invalidPre {
+  margin: 0 auto 3vh;
+}
+
+.invalidPost {
+  margin: 3vh auto 10vh;
+}
+
+.invalidPre,
+.invalidPost {
+  width: 80%;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.invalidPre p:nth-child(2) {
+  margin-top: 2vh;
+}
+
+.css-9l3uo3 {
+  font-size: 0.857rem !important;
+  vertical-align: middle;
+  position: relative;
+  bottom: -1px;
+}
+.signInForm__buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .contentWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+  }
+
+  .leftWrap {
+    display: none;
+  }
+
+  .rightWrap {
+    width: 100%;
+  }
+
+  .rightWrap .topHld .actionTitle img {
+    width: unset !important;
+    max-width: 240px;
+    height: auto;
+    margin-top: -20px;
+  }
+
+  .rightWrap .btHld {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: env(safe-area-inset-bottom);
+    padding: 2vh 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+  }
+
+  .vertical-centre {
+    width: 80%;
+    max-width: 400px;
+    position: absolute;
+    transform: translate(-50%, -47%);
+    left: 50%;
+    top: 50%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .contentWrap {
+    width: 67%;
+  }
+}
+
+.login-loader,
+.login-loader-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.login-loader-mobile {
+  display: none;
+  background-color: #252525;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border-radius: 0px 0px 4px 0px;
+}
+.rightWrap button:disabled {
+  background-color: rgb(230, 227, 227) !important;
+  font-weight: 900;
+}
+
+.input-field {
+  height: 50px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .rightWrap .topHld {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .login-loader-mobile {
+    display: flex;
+  }
+}

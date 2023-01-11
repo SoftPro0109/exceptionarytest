@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .app{
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow: scroll;
+} */
+
+/* #root {
+  overflow: hidden;
+} */
+button {
+  outline: none;
+  border: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MuiButton-root {
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.MuiButton-root .microsoftBtn:hover {
+  background-color: rgb(230, 117, 86) !important;
+}
+
+/* @media (min-width:320px) and (max-width:900px) {
+  * {
+    overflow-y: auto;
+  }
+} */

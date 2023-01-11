@@ -1,0 +1,125 @@
+.dashboard-layout {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  transition: 0.5s ease-out;
+  padding: 20px;
+  background-color: #f55d55;
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.dashboard-layout-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 1780px;
+  transition: 0.5s ease-out;
+  background-color: #f55d55;
+  margin: 0 auto;
+}
+.dashboard-sidebar {
+  background-color: #ffffff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.dashboard-sidebar-icon {
+  background: #252525;
+  width: 68px;
+  height: 95%;
+}
+.dashboard-main {
+  width: 80%;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+.dashboard-right {
+  width: 328px;
+  background-color: #ffffff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.dashboard-right-top {
+  padding: 0 16px;
+  padding-top: 16px;
+  padding-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+.dashboard-right-top-left {
+  width: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard-right-top-right {
+  display: flex;
+  align-items: center;
+}
+.dashboard-right-top-right span {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-right: 12px;
+}
+.dashboard-right-top-right-avater {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.css-1wlk0hk-MuiAvatar-root {
+  width: 100% !important;
+  height: 100% !important;
+}
+.dashboard-right-top-right-avater img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dashboard-right-main {
+  padding: 30px 24px;
+}
+
+.sm-show {
+  display: none !important;
+}
+.md-show {
+  display: none !important;
+}
+
+@media only screen and (max-width: 850px) {
+  .md-show {
+    display: block !important;
+  }
+  .dashboard-layout {
+    padding: 0 !important;
+    margin: 0;
+  }
+  .dashboard-right {
+    display: none !important;
+  }
+  .dashboard-main {
+    border-top-right-radius: 4px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sm-show {
+    display: block !important;
+  }
+
+  .dashboard-main {
+    width: 100%;
+  }
+  .dashboard-sidebar {
+    display: none;
+  }
+}
