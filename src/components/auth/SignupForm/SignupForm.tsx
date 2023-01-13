@@ -5,8 +5,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { Box, Button } from '@mui/material';
 import * as yup from 'yup';
 
-import { useFirebase } from '../../../context/firebase';
-import { ISignupFormValue } from '../../../types/auth';
+// import { useFirebase } from '../../../context/firebase';
+// import { ISignupFormValue } from '../../../types/auth';
 import FormInput from '../../common/FormInput';
 
 const formSchema = yup.object().shape({
@@ -16,29 +16,29 @@ const formSchema = yup.object().shape({
   password: yup.string().required('No password provided')
 });
 
-const initialValues: ISignupFormValue = {
-  firstname: '',
-  lastname: '',
-  email: '',
-  password: ''
-};
+// const initialValues: ISignupFormValue = {
+//   firstname: '',
+//   lastname: '',
+//   email: '',
+//   password: ''
+// };
 
 const SignupForm = () => {
-  const { registerWithCredentials } = useFirebase();
+  // const { registerWithCredentials } = useFirebase();
   const { handleSubmit, control } = useForm({
     resolver: yupResolver(formSchema),
-    defaultValues: initialValues
+    // defaultValues: initialValues
   });
 
-  const onFormSubmit = useCallback(
-    (data: ISignupFormValue) => {
-      registerWithCredentials(data.email, data.password, `${data.firstname} ${data.lastname}`);
-    },
-    [registerWithCredentials]
-  );
+  // const onFormSubmit = useCallback(
+  //   (data: ISignupFormValue) => {
+  //     registerWithCredentials(data.email, data.password, `${data.firstname} ${data.lastname}`);
+  //   },
+  //   [registerWithCredentials]
+  // );
 
   return (
-    <form onSubmit={handleSubmit(onFormSubmit)} className="signInForm">
+    <form /*onSubmit={handleSubmit(onFormSubmit)}*/ className="signInForm">
       <FormInput
         control={control}
         name="firstname"

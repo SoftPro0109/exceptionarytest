@@ -4,17 +4,19 @@ import { Google, LinkedIn, Window } from '@mui/icons-material';
 import { Alert, Box, Button, Divider, Typography } from '@mui/material';
 
 import SigninForm from '../components/auth/SigninForm';
+import ForgotPwdForm from '../components/auth/ForgotPwdForm';
+import SignupForm from '../components/auth/SignupForm';
 import '../assets/signup/signup.css';
 
 const Auth = () => {
   const [authMode, setAuthMode] = useState('signin');
 
-  // const handleClickSignup = useCallback(() => {
-  //   setAuthMode('signup');
-  // }, []);
-  // const handleClickSignin = useCallback(() => {
-  //   setAuthMode('signin');
-  // }, []);
+  const handleClickSignup = useCallback(() => {
+    setAuthMode('signup');
+  }, []);
+  const handleClickSignin = useCallback(() => {
+    setAuthMode('signin');
+  }, []);
   const handleClickForgotPwd = useCallback(() => {
     setAuthMode('forgotpwd');
   }, []);
@@ -48,16 +50,35 @@ const Auth = () => {
                 alt="exceptionly logo"
               />
               <Box className="proText">
-                <Typography>
-                  {
-                  'Sign in to your account'
-                  }
+                 <Typography>
+                  {authMode === 'signin'
+                    ? 'Sign in to your account'
+                    : authMode === 'signup'
+                    ? 'Sign up to your account'
+                    : 'Password Recovery'}
                 </Typography>
               </Box>
             </Box>
 
             <Box className="vertical-centre">
-            {
+            {authMode === 'forgotpwd' ? (
+                <>
+                  <Alert
+                    severity="info"
+                    icon={false}
+                    sx={{
+                      mt: 8,
+                      mb: 8
+                    }}>
+                    <Typography variant="body1" gutterBottom>
+                      What's Next?
+                    </Typography>
+                    We are going to send a recovery email to your address if there is an associated
+                    account. You can use the link for resetting your password.
+                  </Alert>
+                  <ForgotPwdForm />
+                </>
+              ) :
               (
                 <>
                   <Box className="signInGroup">
@@ -92,10 +113,17 @@ const Auth = () => {
                       SIGN IN WITH MICROSOFT
                     </Button>
                     <Divider sx={{ color: 'rgb(102, 102, 102)' }}>or use business email</Divider>
-                  </Box>                  
+                  </Box>     
+                  <Box>
+                    {authMode === 'signin' ? (
+                      <SigninForm onForgotPwd={handleClickForgotPwd} />
+                    ) : (
+                      <SignupForm />
+                    )}
+                  </Box>             
                 </>
               )}
-            <SigninForm onForgotPwd={handleClickForgotPwd} />
+              
              
             </Box>
             
@@ -104,12 +132,19 @@ const Auth = () => {
             <Box className="btHld">
               <Box className="innerNewText">
                 <Typography component="span" className="show">
-                  Don't have an account?
+                  {authMode === 'signin' ? `Don't have an account?` : `Already have an account?`}
+                  
                 </Typography>
                 <Typography  component="span">
-                  <Box className="show">
+                  {authMode === 'signin' ? (
+                  <Box className="show" onClick={handleClickSignup}>
                       <Typography component="span">CREATE ACCOUNT</Typography>
                   </Box>
+                  ): (
+                    <Box className="show" onClick={handleClickSignin}>
+                    <Typography component="span">SIGN IN HERE</Typography>
+                  </Box>
+                  )}
                 </Typography>
                
               </Box>
